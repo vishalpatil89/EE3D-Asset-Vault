@@ -3,7 +3,7 @@
 import { useAppStore } from '@/lib/store'
 import { AssetCard } from '@/components/asset-card'
 import { FilterPanel } from '@/components/filter-panel'
-import { Empty, EmptyDescription, EmptyIcon, EmptyTitle } from '@/components/ui/empty'
+import { Empty, EmptyDescription, EmptyHeader, EmptyMedia, EmptyTitle } from '@/components/ui/empty'
 import { Search } from 'lucide-react'
 
 export function AssetGrid() {
@@ -31,13 +31,15 @@ export function AssetGrid() {
         </div>
       ) : (
         <Empty className="py-16">
-          <EmptyIcon>
-            <Search className="h-10 w-10" />
-          </EmptyIcon>
-          <EmptyTitle>No assets found</EmptyTitle>
-          <EmptyDescription>
-            Try adjusting your filters or search terms
-          </EmptyDescription>
+          <EmptyHeader>
+            <EmptyMedia variant="icon">
+              <Search className="h-5 w-5" />
+            </EmptyMedia>
+            <EmptyTitle>No assets found</EmptyTitle>
+            <EmptyDescription>
+              Try adjusting your filters or search terms
+            </EmptyDescription>
+          </EmptyHeader>
         </Empty>
       )}
     </div>
