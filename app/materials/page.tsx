@@ -10,7 +10,8 @@ import { Search } from 'lucide-react'
 
 export default function MaterialsPage() {
   const assets = useAppStore(state => state.assets)
-  const searchQuery = useAppStore(state => state.searchQuery)
+  const filters = useAppStore(state => state.filters)
+  const searchQuery = filters.search || ''
   
   // Filter for materials only
   const materialAssets = assets.filter(asset => {
