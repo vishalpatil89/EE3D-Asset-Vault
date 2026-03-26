@@ -28,7 +28,7 @@ const mainNavItems = [
   { icon: Layers, label: 'Materials', href: '/materials' },
   { icon: Wrench, label: 'Tools', href: '/tools' },
   { icon: FolderOpen, label: 'Collections', href: '/collections' },
-  { icon: FileText, label: 'Documentation', href: '/docs' },
+  { icon: FileText, label: 'Documentation', href: '/documentation' },
   { icon: Heart, label: 'Favorites', href: '/favorites' },
   { icon: Activity, label: 'Activity', href: '/activity' },
 ]
