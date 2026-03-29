@@ -31,7 +31,7 @@ export function MaterialsRightPanel({ featuredMaterials }: MaterialsRightPanelPr
   ]
 
   return (
-    <aside className="hidden xl:flex fixed right-0 top-16 h-[calc(100vh-4rem)] w-80 border-l border-border/50 bg-card/50 glass-card flex-col overflow-hidden">
+    <aside className="hidden xl:flex fixed right-0 top-16 h-[calc(100vh-4rem)] w-80 border-l border-border/50 bg-card/80 flex-col overflow-hidden">
       <div className="flex-1 overflow-y-auto space-y-8 p-6">
         {/* Featured Materials Section */}
         <div>
@@ -197,7 +197,7 @@ export function MaterialsRightPanel({ featuredMaterials }: MaterialsRightPanelPr
 
       {/* Footer Section */}
       <div className="border-t border-border/50 p-4 bg-card/80">
-        <Button className="w-full gradient-primary hover:gradient-primary-hover text-primary-foreground rounded-lg gap-2">
+        <Button className="w-full bg-blue-500 hover:bg-blue-600 text-white rounded-lg gap-2">
           <span>View All Materials</span>
           <ChevronRight className="h-4 w-4" />
         </Button>

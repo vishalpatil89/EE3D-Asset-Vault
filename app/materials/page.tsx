@@ -4,7 +4,6 @@ import { Navbar } from '@/components/navbar'
 import { Sidebar } from '@/components/sidebar'
 import { AssetCard } from '@/components/asset-card'
 import { FilterPanel } from '@/components/filter-panel'
-import { MaterialsRightPanel } from '@/components/materials-right-panel'
 import { useAppStore } from '@/lib/store'
 import { materialAssets } from '@/lib/data'
 import { Card } from '@/components/ui/card'
@@ -77,15 +76,12 @@ export default function MaterialsPage() {
 
   const categories = ['Car Paints', 'Glass', 'Plastic', 'Rubber', 'Metal', 'Leather']
 
-  // Get featured materials (favorited ones)
-  const featuredMaterials = materialAssets.filter(m => m.isFavorite).slice(0, 5)
-
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
       <div className="flex">
         <Sidebar />
-        <main className="flex-1 pt-20 pb-12 px-8 ml-56 mr-80 xl:mr-80">
+        <main className="flex-1 pt-20 pb-12 px-8 ml-56">
           <div className="max-w-7xl mx-auto space-y-8">
             {/* Page Header */}
             <div className="flex items-start justify-between gap-4 border-b border-border/50 pb-8">
@@ -100,7 +96,7 @@ export default function MaterialsPage() {
                   Browse, create and manage automotive PBR materials with advanced rendering properties
                 </p>
               </div>
-              <Button className="gap-2 gradient-primary hover:gradient-primary-hover text-primary-foreground rounded-xl glow-primary">
+              <Button className="gap-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg">
                 <Upload className="h-4 w-4" />
                 Upload Material
               </Button>
@@ -136,7 +132,7 @@ export default function MaterialsPage() {
             </div>
 
             {/* Filters Section */}
-            <div className="bg-card border border-border/50 rounded-2xl p-6 glass-card">
+            <div className="bg-card border border-border/50 rounded-lg p-6">
               <FilterPanel />
             </div>
 
@@ -242,7 +238,6 @@ export default function MaterialsPage() {
             )}
           </div>
         </main>
-        <MaterialsRightPanel featuredMaterials={featuredMaterials} />
       </div>
     </div>
   )
