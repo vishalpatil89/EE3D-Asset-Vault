@@ -1,3 +1,16 @@
+export interface PBRProperties {
+  baseColor?: string
+  metallic?: number
+  roughness?: number
+  specular?: number
+  clearCoat?: number
+  clearCoatRoughness?: number
+  transmission?: number
+  ior?: number
+  anisotropy?: number
+  subsurface?: number
+}
+
 export interface Asset {
   id: string
   name: string
@@ -23,6 +36,7 @@ export interface Asset {
   units?: string
   textureResolution?: string
   maps?: string[]
+  pbr?: PBRProperties
   files: AssetFile[]
   isFavorite?: boolean
 }
