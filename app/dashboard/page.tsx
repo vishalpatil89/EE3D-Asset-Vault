@@ -47,7 +47,7 @@ export default function DashboardPage() {
       <Navbar />
       <div className="flex">
         <Sidebar />
-        <main className="flex-1 pt-20 pb-12 px-8 ml-56 mr-80">
+        <main className="flex-1 pt-20 pb-12 px-8 ml-56">
           <div className="max-w-5xl mx-auto space-y-8">
             {/* Page Header */}
             <div className="flex items-start justify-between border-b border-border/50 pb-8">
@@ -267,7 +267,7 @@ export default function DashboardPage() {
         </main>
 
         {/* Right Sidebar */}
-        <aside className="hidden xl:flex fixed right-0 top-16 h-[calc(100vh-4rem)] w-80 border-l border-border/50 bg-card flex-col overflow-y-auto">
+        <aside className="hidden lg:flex w-80 border-l border-border/50 bg-card flex-col overflow-y-auto pt-20">
           <div className="p-6 space-y-6 flex-1">
             {/* Materials Section */}
             <div>
