@@ -16,6 +16,7 @@ import { Badge } from '@/components/ui/badge'
 import { useAppStore } from '@/lib/store'
 import { currentUser, notifications } from '@/lib/data'
 import { cn } from '@/lib/utils'
+import { ThemeSelector } from '@/components/theme-selector'
 
 export function Navbar() {
   const { filters, setFilters, setUploadModalOpen } = useAppStore()
@@ -74,10 +75,8 @@ export function Navbar() {
 
         {/* Actions */}
         <div className="flex items-center gap-3">
-          {/* Theme toggle placeholder */}
-          <Button variant="ghost" size="icon" className="rounded-full h-9 w-9">
-            <div className="w-4 h-4 rounded-full border-2 border-muted-foreground" />
-          </Button>
+          {/* Theme Selector */}
+          <ThemeSelector />
 
           {/* Notifications */}
           <DropdownMenu>

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
+import { ThemeProvider } from '@/lib/theme-context'
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -39,8 +40,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`${inter.variable} font-sans antialiased bg-background text-foreground`}>
-        {children}
-        <Analytics />
+        <ThemeProvider>
+          {children}
+          <Analytics />
+        </ThemeProvider>
       </body>
     </html>
   )
