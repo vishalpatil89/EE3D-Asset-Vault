@@ -54,25 +54,25 @@ export default function DashboardPage() {
                 <h1 className="text-3xl font-semibold text-foreground">Dashboard</h1>
                 <p className="text-sm text-muted-foreground mt-1">Browse and manage your automotive 3D assets</p>
               </div>
-              <Button className="gap-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg">
+              <Button className="gap-2 gradient-primary glow-primary text-primary-foreground rounded-lg">
                 <Upload className="h-4 w-4" />
-                Upload Motorial
+                Upload Material
               </Button>
             </div>
 
             {/* Stats Grid */}
             <div className="grid grid-cols-4 gap-4">
               {stats.map((stat) => (
-                <Card key={stat.title} className="border border-border/50 bg-white">
+                <Card key={stat.title} className="">
                   <CardHeader className="pb-2">
                     <div className="flex items-center gap-2 mb-2">
-                      <stat.icon className="h-5 w-5 text-blue-500" />
+                      <stat.icon className="h-5 w-5 text-primary" />
                       <CardTitle className="text-sm font-medium text-muted-foreground">{stat.title}</CardTitle>
                     </div>
                   </CardHeader>
                   <CardContent>
                     <div className="text-3xl font-bold text-foreground">{stat.value}</div>
-                    <p className="text-xs text-muted-foreground mt-1">{stat.change} this month</p>
+                    <p className="text-xs text-primary/70 mt-1">{stat.change} this month</p>
                   </CardContent>
                 </Card>
               ))}
@@ -84,7 +84,7 @@ export default function DashboardPage() {
               
               {/* Featured Cards */}
               <div className="grid grid-cols-3 gap-4 mb-8">
-                <Card className="border border-border/50 overflow-hidden">
+                <Card className="overflow-hidden">
                   <div className="aspect-video bg-slate-200">
                     <img src="https://images.unsplash.com/photo-1609042231432-bed30f02d1d5?w=500&h=300&fit=crop" alt="3D Models" className="w-full h-full object-cover" />
                   </div>

@@ -53,7 +53,7 @@ export function Sidebar() {
   return (
     <aside 
       className={cn(
-        "fixed left-0 top-16 bottom-0 z-40 glass border-r border-border/30",
+        "fixed left-0 top-16 bottom-0 z-40 bg-background/40 border-r border-border/30 backdrop-blur-xl",
         "transition-all duration-300 ease-in-out",
         sidebarCollapsed ? "w-16" : "w-56"
       )}
@@ -73,7 +73,7 @@ export function Sidebar() {
                   "flex items-center gap-3 px-3 py-2.5 rounded-xl",
                   "transition-all duration-200 group relative",
                   isActive 
-                    ? "bg-primary/10 text-primary glow-primary" 
+                    ? "bg-primary/20 text-primary border border-primary/40 shadow-lg shadow-primary/30" 
                     : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
                 )}
               >

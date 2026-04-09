@@ -37,8 +37,8 @@ export function AssetCard({ asset }: AssetCardProps) {
     <div
       className={cn(
         "group relative rounded-2xl overflow-hidden",
-        "glass-card transition-all duration-300",
-        isHovered && "scale-[1.02] shadow-lg glow-primary"
+        "card-glow transition-all duration-300",
+        isHovered && "scale-[1.02] shadow-lg glow-primary border-glow"
       )}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
