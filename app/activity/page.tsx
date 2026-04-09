@@ -9,35 +9,35 @@ import { Upload, Download, Edit, Check, MessageSquare } from 'lucide-react'
 
 const activities = [
   {
-    user: { name: 'Jason Mills', avatar: '', initials: 'JM' },
+    user: { name: 'Vishal Patil', avatar: '', initials: 'VP' },
     action: 'uploaded',
     asset: 'Sport Tyre V2',
     time: '2 hours ago',
     icon: Upload,
   },
   {
-    user: { name: 'Sarah Chen', avatar: '', initials: 'SC' },
+    user: { name: 'Deepen G.', avatar: '', initials: 'DG' },
     action: 'approved',
     asset: 'Carbon Fiber Material',
     time: '4 hours ago',
     icon: Check,
   },
   {
-    user: { name: 'Mike Wilson', avatar: '', initials: 'MW' },
+    user: { name: 'Kasturi B.', avatar: '', initials: 'KB' },
     action: 'downloaded',
     asset: 'Alloy Wheel Set',
     time: '5 hours ago',
     icon: Download,
   },
   {
-    user: { name: 'Emily Davis', avatar: '', initials: 'ED' },
+    user: { name: 'Sreejit', avatar: '', initials: 'SR' },
     action: 'commented on',
     asset: 'Interior Dashboard',
     time: '6 hours ago',
     icon: MessageSquare,
   },
   {
-    user: { name: 'Alex Turner', avatar: '', initials: 'AT' },
+    user: { name: 'Rahul', avatar: '', initials: 'RH' },
     action: 'updated',
     asset: 'Headlight Assembly',
     time: '1 day ago',
