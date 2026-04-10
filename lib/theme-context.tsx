@@ -13,10 +13,8 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<ThemeType>('cyan')
-  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    setMounted(true)
     const savedTheme = localStorage.getItem('app-theme') as ThemeType | null
     if (savedTheme) {
       setTheme(savedTheme)
@@ -40,10 +38,6 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     if (selectedTheme !== 'cyan') {
       html.classList.add(`theme-${selectedTheme}`)
     }
-  }
-
-  if (!mounted) {
-    return <>{children}</>
   }
 
   return (
