@@ -787,8 +787,8 @@ export const materialAssets: Asset[] = [
     category: 'Materials',
     subcategory: 'Metal',
     tags: ['metal', 'chrome', 'shiny', 'automotive'],
-    description: 'Shiny chrome metal for trim and accents.',
-    thumbnail: '/materials/chrome-metal.jpg',
+    description: 'Shiny chrome metal for trim and accents; highly reflective with mirror-like finish.',
+    thumbnail: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-77BAoPe7l0MDOR28R7TzW8eGKtpBrD.png',
     author: 'Mike Johnson',
     createdAt: '2024-03-21T09:30:00Z',
     updatedAt: '2024-04-24T14:20:00Z',
@@ -807,26 +807,28 @@ export const materialAssets: Asset[] = [
       clearCoatRoughness: 0.15
     },
     files: [
-      { id: '1', name: 'chrome_metal.sbsar', type: 'sbsar', size: '9.3 MB', sizeBytes: 9749504, downloadUrl: '#' }
+      { id: '1', name: 'chrome_metal.sbsar', type: 'sbsar', size: '9.3 MB', sizeBytes: 9749504, downloadUrl: '#' },
+      { id: '2', name: 'chrome_metal_albedo_8k.png', type: 'png', size: '19.8 MB', sizeBytes: 20766720, downloadUrl: '#' },
+      { id: '3', name: 'chrome_metal_normal_8k.png', type: 'png', size: '18.2 MB', sizeBytes: 19087360, downloadUrl: '#' }
     ],
     isFavorite: true
   },
   {
     id: 'm17',
-    name: 'Brushed Metal',
+    name: 'Brushed Chrome',
     category: 'Materials',
     subcategory: 'Metal',
-    tags: ['metal', 'brushed', 'matte', 'automotive'],
-    description: 'Brushed metal finish with directional grain.',
-    thumbnail: '/materials/brushed-metal.jpg',
+    tags: ['metal', 'brushed', 'chrome', 'matte'],
+    description: 'Brushed chrome finish with directional grain; reduced reflectivity with textured appearance.',
+    thumbnail: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-77BAoPe7l0MDOR28R7TzW8eGKtpBrD.png',
     author: 'Sarah Chen',
     createdAt: '2024-03-19T13:00:00Z',
     updatedAt: '2024-04-20T11:45:00Z',
     version: '1.3',
     status: 'approved',
     department: 'EE Materials',
-    resolution: '4K',
-    textureResolution: '4K',
+    resolution: '8K',
+    textureResolution: '8K',
     maps: ['BaseColor', 'Normal', 'Roughness', 'Metallic', 'AO'],
     pbr: {
       baseColor: '#a8a8a8',
@@ -837,9 +839,11 @@ export const materialAssets: Asset[] = [
       clearCoatRoughness: 0.4
     },
     files: [
-      { id: '1', name: 'brushed_metal.sbsar', type: 'sbsar', size: '8.6 MB', sizeBytes: 9010176, downloadUrl: '#' }
+      { id: '1', name: 'brushed_chrome.sbsar', type: 'sbsar', size: '9.2 MB', sizeBytes: 9646080, downloadUrl: '#' },
+      { id: '2', name: 'brushed_chrome_albedo_8k.png', type: 'png', size: '19.5 MB', sizeBytes: 20448256, downloadUrl: '#' },
+      { id: '3', name: 'brushed_chrome_normal_8k.png', type: 'png', size: '18.1 MB', sizeBytes: 18980864, downloadUrl: '#' }
     ],
-    isFavorite: false
+    isFavorite: true
   },
   {
     id: 'm18',
@@ -847,8 +851,8 @@ export const materialAssets: Asset[] = [
     category: 'Materials',
     subcategory: 'Metal',
     tags: ['metal', 'aluminum', 'polished', 'premium'],
-    description: 'High-polish aluminum for performance parts.',
-    thumbnail: '/materials/polished-aluminum.jpg',
+    description: 'High-polish aluminum for performance parts; bright reflective surface with minimal imperfections.',
+    thumbnail: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-77BAoPe7l0MDOR28R7TzW8eGKtpBrD.png',
     author: 'David Park',
     createdAt: '2024-03-17T10:30:00Z',
     updatedAt: '2024-04-23T09:00:00Z',
@@ -867,9 +871,11 @@ export const materialAssets: Asset[] = [
       clearCoatRoughness: 0.2
     },
     files: [
-      { id: '1', name: 'polished_aluminum.sbsar', type: 'sbsar', size: '9.1 MB', sizeBytes: 9536512, downloadUrl: '#' }
+      { id: '1', name: 'polished_aluminum.sbsar', type: 'sbsar', size: '9.1 MB', sizeBytes: 9536512, downloadUrl: '#' },
+      { id: '2', name: 'polished_aluminum_albedo_8k.png', type: 'png', size: '19.7 MB', sizeBytes: 20659200, downloadUrl: '#' },
+      { id: '3', name: 'polished_aluminum_normal_8k.png', type: 'png', size: '18.0 MB', sizeBytes: 18874368, downloadUrl: '#' }
     ],
-    isFavorite: false
+    isFavorite: true
   },
   {
     id: 'm19',
@@ -877,16 +883,16 @@ export const materialAssets: Asset[] = [
     category: 'Materials',
     subcategory: 'Metal',
     tags: ['metal', 'anodized', 'color', 'automotive'],
-    description: 'Color anodized aluminum with protective coating.',
-    thumbnail: '/materials/anodized-metal.jpg',
+    description: 'Color anodized aluminum with protective coating; durable finish with rich color depth.',
+    thumbnail: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-77BAoPe7l0MDOR28R7TzW8eGKtpBrD.png',
     author: 'Emma Wilson',
     createdAt: '2024-03-15T14:15:00Z',
     updatedAt: '2024-04-22T12:30:00Z',
     version: '1.2',
     status: 'approved',
     department: 'EE Materials',
-    resolution: '4K',
-    textureResolution: '4K',
+    resolution: '8K',
+    textureResolution: '8K',
     maps: ['BaseColor', 'Normal', 'Roughness', 'Metallic'],
     pbr: {
       baseColor: '#6b8e23',
@@ -897,9 +903,11 @@ export const materialAssets: Asset[] = [
       clearCoatRoughness: 0.3
     },
     files: [
-      { id: '1', name: 'anodized_metal.sbsar', type: 'sbsar', size: '8.9 MB', sizeBytes: 9330688, downloadUrl: '#' }
+      { id: '1', name: 'anodized_metal.sbsar', type: 'sbsar', size: '8.9 MB', sizeBytes: 9330688, downloadUrl: '#' },
+      { id: '2', name: 'anodized_metal_albedo_8k.png', type: 'png', size: '19.3 MB', sizeBytes: 20251648, downloadUrl: '#' },
+      { id: '3', name: 'anodized_metal_normal_8k.png', type: 'png', size: '17.9 MB', sizeBytes: 18767872, downloadUrl: '#' }
     ],
-    isFavorite: false
+    isFavorite: true
   },
 
   // Leather Materials
@@ -909,16 +917,16 @@ export const materialAssets: Asset[] = [
     category: 'Materials',
     subcategory: 'Leather',
     tags: ['leather', 'nappa', 'premium', 'interior'],
-    description: 'Soft Nappa leather for luxury interiors.',
-    thumbnail: '/materials/nappa-leather.jpg',
+    description: 'Soft Nappa leather for luxury interiors; supple texture with rich color and smooth finish.',
+    thumbnail: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-77BAoPe7l0MDOR28R7TzW8eGKtpBrD.png',
     author: 'Alex Turner',
     createdAt: '2024-03-13T11:45:00Z',
     updatedAt: '2024-04-21T13:20:00Z',
     version: '1.4',
     status: 'approved',
     department: 'EE Materials',
-    resolution: '4K',
-    textureResolution: '4K',
+    resolution: '8K',
+    textureResolution: '8K',
     maps: ['BaseColor', 'Normal', 'Roughness', 'AO'],
     pbr: {
       baseColor: '#5a4a42',
@@ -930,7 +938,9 @@ export const materialAssets: Asset[] = [
       subsurface: 0.15
     },
     files: [
-      { id: '1', name: 'premium_nappa_leather.sbsar', type: 'sbsar', size: '10.2 MB', sizeBytes: 10695475, downloadUrl: '#' }
+      { id: '1', name: 'premium_nappa_leather.sbsar', type: 'sbsar', size: '10.8 MB', sizeBytes: 11321311, downloadUrl: '#' },
+      { id: '2', name: 'premium_nappa_leather_albedo_8k.png', type: 'png', size: '19.6 MB', sizeBytes: 20555776, downloadUrl: '#' },
+      { id: '3', name: 'premium_nappa_leather_normal_8k.png', type: 'png', size: '18.3 MB', sizeBytes: 19194880, downloadUrl: '#' }
     ],
     isFavorite: true
   },
@@ -940,16 +950,16 @@ export const materialAssets: Asset[] = [
     category: 'Materials',
     subcategory: 'Leather',
     tags: ['leather', 'perforated', 'interior', 'ventilated'],
-    description: 'Ventilated perforated leather for breathability.',
-    thumbnail: '/materials/perforated-leather.jpg',
+    description: 'Ventilated perforated leather for breathability; punch holes pattern for enhanced airflow.',
+    thumbnail: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-77BAoPe7l0MDOR28R7TzW8eGKtpBrD.png',
     author: 'Mike Johnson',
     createdAt: '2024-03-11T09:20:00Z',
     updatedAt: '2024-04-20T10:15:00Z',
     version: '1.0',
     status: 'approved',
     department: 'EE Materials',
-    resolution: '4K',
-    textureResolution: '4K',
+    resolution: '8K',
+    textureResolution: '8K',
     maps: ['BaseColor', 'Normal', 'Roughness', 'AO'],
     pbr: {
       baseColor: '#3a3a36',
@@ -961,9 +971,11 @@ export const materialAssets: Asset[] = [
       subsurface: 0.1
     },
     files: [
-      { id: '1', name: 'perforated_leather.sbsar', type: 'sbsar', size: '9.7 MB', sizeBytes: 10169811, downloadUrl: '#' }
+      { id: '1', name: 'perforated_leather.sbsar', type: 'sbsar', size: '10.3 MB', sizeBytes: 10800947, downloadUrl: '#' },
+      { id: '2', name: 'perforated_leather_albedo_8k.png', type: 'png', size: '19.8 MB', sizeBytes: 20766720, downloadUrl: '#' },
+      { id: '3', name: 'perforated_leather_normal_8k.png', type: 'png', size: '18.4 MB', sizeBytes: 19302400, downloadUrl: '#' }
     ],
-    isFavorite: false
+    isFavorite: true
   },
   {
     id: 'm22',
@@ -971,16 +983,16 @@ export const materialAssets: Asset[] = [
     category: 'Materials',
     subcategory: 'Leather',
     tags: ['leather', 'synthetic', 'eco-friendly', 'interior'],
-    description: 'Eco-friendly synthetic leather alternative.',
-    thumbnail: '/materials/synthetic-leather.jpg',
+    description: 'Eco-friendly synthetic leather alternative; sustainable material with leather-like appearance and durability.',
+    thumbnail: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-77BAoPe7l0MDOR28R7TzW8eGKtpBrD.png',
     author: 'Sarah Chen',
     createdAt: '2024-03-09T13:30:00Z',
     updatedAt: '2024-04-19T14:45:00Z',
     version: '1.1',
     status: 'approved',
     department: 'EE Materials',
-    resolution: '4K',
-    textureResolution: '4K',
+    resolution: '8K',
+    textureResolution: '8K',
     maps: ['BaseColor', 'Normal', 'Roughness'],
     pbr: {
       baseColor: '#4a4a4a',
@@ -991,9 +1003,11 @@ export const materialAssets: Asset[] = [
       clearCoatRoughness: 0.45
     },
     files: [
-      { id: '1', name: 'synthetic_leather.sbsar', type: 'sbsar', size: '8.4 MB', sizeBytes: 8808243, downloadUrl: '#' }
+      { id: '1', name: 'synthetic_leather.sbsar', type: 'sbsar', size: '9.1 MB', sizeBytes: 9536512, downloadUrl: '#' },
+      { id: '2', name: 'synthetic_leather_albedo_8k.png', type: 'png', size: '19.4 MB', sizeBytes: 20345856, downloadUrl: '#' },
+      { id: '3', name: 'synthetic_leather_normal_8k.png', type: 'png', size: '18.2 MB', sizeBytes: 19087360, downloadUrl: '#' }
     ],
-    isFavorite: false
+    isFavorite: true
   }
 ]
 
