@@ -270,12 +270,12 @@ export const materialAssets: Asset[] = [
   // Car Paints
   {
     id: 'm1',
-    name: 'Metallic Blue Paint',
+    name: 'Solid Carpaint',
     category: 'Materials',
     subcategory: 'Car Paints',
-    tags: ['paint', 'metallic', 'automotive', 'premium'],
-    description: 'Premium metallic blue automotive paint with realistic flakes.',
-    thumbnail: '/materials/blue-tinted-glass.jpg',
+    tags: ['paint', 'solid', 'automotive', 'plain'],
+    description: 'Plain, uniform color with no flakes; clean and simple reflections.',
+    thumbnail: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-y0iMISY4pO6tKY82hMTjpRucoJW2Wy.png',
     author: 'Mike Johnson',
     createdAt: '2024-04-20T10:00:00Z',
     updatedAt: '2024-04-24T10:00:00Z',
@@ -284,30 +284,30 @@ export const materialAssets: Asset[] = [
     department: 'EE Materials',
     resolution: '8K',
     textureResolution: '8K',
-    maps: ['BaseColor', 'Normal', 'Roughness', 'Metallic', 'AO'],
+    maps: ['BaseColor', 'Normal', 'Roughness'],
     pbr: {
-      baseColor: '#1a3a52',
-      metallic: 0.8,
-      roughness: 0.15,
+      baseColor: '#cc0000',
+      metallic: 0.0,
+      roughness: 0.2,
       specular: 0.5,
-      clearCoat: 0.9,
-      clearCoatRoughness: 0.1
+      clearCoat: 1.0,
+      clearCoatRoughness: 0.15
     },
     files: [
-      { id: '1', name: 'metallic_blue_paint.sbsar', type: 'sbsar', size: '12.3 MB', sizeBytes: 12901376, downloadUrl: '#' },
-      { id: '2', name: 'paint_albedo_8k.png', type: 'png', size: '18.5 MB', sizeBytes: 19398656, downloadUrl: '#' },
-      { id: '3', name: 'paint_normal_8k.png', type: 'png', size: '16.2 MB', sizeBytes: 16986112, downloadUrl: '#' }
+      { id: '1', name: 'solid_carpaint.sbsar', type: 'sbsar', size: '10.5 MB', sizeBytes: 11010048, downloadUrl: '#' },
+      { id: '2', name: 'solid_carpaint_albedo_8k.png', type: 'png', size: '18.5 MB', sizeBytes: 19398656, downloadUrl: '#' },
+      { id: '3', name: 'solid_carpaint_normal_8k.png', type: 'png', size: '16.2 MB', sizeBytes: 16986112, downloadUrl: '#' }
     ],
     isFavorite: true
   },
   {
     id: 'm2',
-    name: 'Pearl White Paint',
+    name: 'Metallic Carpaint',
     category: 'Materials',
     subcategory: 'Car Paints',
-    tags: ['paint', 'pearl', 'automotive', 'premium'],
-    description: 'Luxurious pearl white finish with multi-layer coating simulation.',
-    thumbnail: '/materials/clear-glass.jpg',
+    tags: ['paint', 'metallic', 'automotive', 'premium'],
+    description: 'Contains fine metallic flakes; adds sparkle and dynamic reflections.',
+    thumbnail: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-eCkbUai17CoUBCiLUzBIWbp1JccbHP.png',
     author: 'Sarah Chen',
     createdAt: '2024-04-18T14:30:00Z',
     updatedAt: '2024-04-22T09:15:00Z',
@@ -316,47 +316,83 @@ export const materialAssets: Asset[] = [
     department: 'EE Materials',
     resolution: '8K',
     textureResolution: '8K',
-    maps: ['BaseColor', 'Normal', 'Roughness', 'AO'],
+    maps: ['BaseColor', 'Normal', 'Roughness', 'Metallic'],
     pbr: {
-      baseColor: '#f5f5f5',
-      metallic: 0.2,
-      roughness: 0.18,
+      baseColor: '#1a1a1a',
+      metallic: 0.85,
+      roughness: 0.25,
       specular: 0.6,
-      clearCoat: 1.0,
-      clearCoatRoughness: 0.08
+      clearCoat: 0.95,
+      clearCoatRoughness: 0.1
     },
     files: [
-      { id: '1', name: 'pearl_white_paint.sbsar', type: 'sbsar', size: '11.8 MB', sizeBytes: 12373504, downloadUrl: '#' }
+      { id: '1', name: 'metallic_carpaint.sbsar', type: 'sbsar', size: '12.3 MB', sizeBytes: 12901376, downloadUrl: '#' },
+      { id: '2', name: 'metallic_carpaint_albedo_8k.png', type: 'png', size: '19.2 MB', sizeBytes: 20132864, downloadUrl: '#' },
+      { id: '3', name: 'metallic_carpaint_normal_8k.png', type: 'png', size: '17.8 MB', sizeBytes: 18661376, downloadUrl: '#' }
     ],
-    isFavorite: false
+    isFavorite: true
   },
   {
     id: 'm3',
-    name: 'Matte Black Paint',
+    name: 'Pearlescent Carpaint',
     category: 'Materials',
     subcategory: 'Car Paints',
-    tags: ['paint', 'matte', 'automotive', 'sports'],
-    description: 'Sleek matte black automotive paint without clear coat.',
-    thumbnail: '/materials/hard-rubber.jpg',
+    tags: ['paint', 'pearlescent', 'automotive', 'premium'],
+    description: 'Uses mica particles; creates subtle color shift and depth.',
+    thumbnail: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-IBJ8QRTMGJ7ypOG9oc00y21qQkoKmn.png',
     author: 'David Park',
     createdAt: '2024-04-16T11:45:00Z',
     updatedAt: '2024-04-21T16:20:00Z',
     version: '1.0',
     status: 'approved',
     department: 'EE Materials',
-    resolution: '4K',
-    textureResolution: '4K',
-    maps: ['BaseColor', 'Normal', 'Roughness'],
+    resolution: '8K',
+    textureResolution: '8K',
+    maps: ['BaseColor', 'Normal', 'Roughness', 'AO'],
     pbr: {
-      baseColor: '#0a0a0a',
-      metallic: 0.0,
-      roughness: 0.85,
-      specular: 0.3,
-      clearCoat: 0.0,
-      clearCoatRoughness: 1.0
+      baseColor: '#e0c0d0',
+      metallic: 0.15,
+      roughness: 0.18,
+      specular: 0.7,
+      clearCoat: 1.0,
+      clearCoatRoughness: 0.08
     },
     files: [
-      { id: '1', name: 'matte_black_paint.sbsar', type: 'sbsar', size: '9.5 MB', sizeBytes: 9961472, downloadUrl: '#' }
+      { id: '1', name: 'pearlescent_carpaint.sbsar', type: 'sbsar', size: '11.8 MB', sizeBytes: 12373504, downloadUrl: '#' },
+      { id: '2', name: 'pearlescent_carpaint_albedo_8k.png', type: 'png', size: '18.8 MB', sizeBytes: 19716096, downloadUrl: '#' },
+      { id: '3', name: 'pearlescent_carpaint_normal_8k.png', type: 'png', size: '17.0 MB', sizeBytes: 17825792, downloadUrl: '#' }
+    ],
+    isFavorite: true
+  },
+  {
+    id: 'm3a',
+    name: 'Matte / Satin Carpaint',
+    category: 'Materials',
+    subcategory: 'Car Paints',
+    tags: ['paint', 'matte', 'satin', 'automotive', 'matte-finish'],
+    description: 'Low or no gloss; soft, diffused reflections with a non-shiny look.',
+    thumbnail: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-wocST9N0hWKW9AeQygw0FygB3Exy06.png',
+    author: 'Mike Johnson',
+    createdAt: '2024-04-15T09:30:00Z',
+    updatedAt: '2024-04-21T14:00:00Z',
+    version: '1.0',
+    status: 'approved',
+    department: 'EE Materials',
+    resolution: '8K',
+    textureResolution: '8K',
+    maps: ['BaseColor', 'Normal', 'Roughness'],
+    pbr: {
+      baseColor: '#1a1a1a',
+      metallic: 0.0,
+      roughness: 0.8,
+      specular: 0.25,
+      clearCoat: 0.2,
+      clearCoatRoughness: 0.95
+    },
+    files: [
+      { id: '1', name: 'matte_satin_carpaint.sbsar', type: 'sbsar', size: '9.8 MB', sizeBytes: 10274816, downloadUrl: '#' },
+      { id: '2', name: 'matte_satin_carpaint_albedo_8k.png', type: 'png', size: '18.2 MB', sizeBytes: 19083264, downloadUrl: '#' },
+      { id: '3', name: 'matte_satin_carpaint_normal_8k.png', type: 'png', size: '16.5 MB', sizeBytes: 17301504, downloadUrl: '#' }
     ],
     isFavorite: false
   },
