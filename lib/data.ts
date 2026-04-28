@@ -433,12 +433,12 @@ export const materialAssets: Asset[] = [
   },
   {
     id: 'm5',
-    name: 'Black Tinted Glass',
+    name: 'Tinted Glass (Black)',
     category: 'Materials',
     subcategory: 'Tinted Glass',
     tags: ['glass', 'tinted', 'black', 'automotive'],
     description: 'Black tinted automotive glass with dark appearance and light blocking properties.',
-    thumbnail: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-vY7XO7TnQH1JvDImQY7vYQhIcZ6ISN.png',
+    thumbnail: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-KtUDApJdZ6YRsZwWsFaxmuX5rq5TcW.png',
     author: 'Alex Turner',
     createdAt: '2024-04-12T09:20:00Z',
     updatedAt: '2024-04-20T14:45:00Z',
@@ -465,12 +465,12 @@ export const materialAssets: Asset[] = [
   },
   {
     id: 'm6',
-    name: 'Red Tinted Glass',
+    name: 'Tinted Glass (Red / Orange)',
     category: 'Materials',
     subcategory: 'Tinted Glass',
-    tags: ['glass', 'tinted', 'red', 'automotive'],
-    description: 'Red tinted window glass with warm color cast and dynamic reflections.',
-    thumbnail: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-hngrj18RlVT0qLXMBYtqdVX6LIeRNF.png',
+    tags: ['glass', 'tinted', 'red', 'orange', 'automotive', 'warm'],
+    description: 'Red/orange tinted window glass with warm color cast and dynamic reflections.',
+    thumbnail: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-VqraiIJSANGIiLNjBP60KYjKK2fYix.png',
     author: 'Mike Johnson',
     createdAt: '2024-04-10T15:30:00Z',
     updatedAt: '2024-04-19T11:00:00Z',
@@ -481,49 +481,17 @@ export const materialAssets: Asset[] = [
     textureResolution: '8K',
     maps: ['BaseColor', 'Normal'],
     pbr: {
-      baseColor: '#8b2323',
+      baseColor: '#a85a2c',
       metallic: 0.0,
       roughness: 0.07,
       specular: 0.88,
-      transmission: 0.7,
-      ior: 1.52
-    },
-    files: [
-      { id: '1', name: 'red_tinted_glass.sbsar', type: 'sbsar', size: '6.9 MB', sizeBytes: 7229440, downloadUrl: '#' },
-      { id: '2', name: 'red_tinted_glass_albedo_8k.png', type: 'png', size: '19.2 MB', sizeBytes: 20132864, downloadUrl: '#' },
-      { id: '3', name: 'red_tinted_glass_normal_8k.png', type: 'png', size: '17.5 MB', sizeBytes: 18350080, downloadUrl: '#' }
-    ],
-    isFavorite: false
-  },
-  {
-    id: 'm7',
-    name: 'Orange Tinted Glass',
-    category: 'Materials',
-    subcategory: 'Tinted Glass',
-    tags: ['glass', 'tinted', 'orange', 'automotive'],
-    description: 'Orange tinted automotive glass with warm spectrum tinting and light transmission.',
-    thumbnail: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-hngrj18RlVT0qLXMBYtqdVX6LIeRNF.png',
-    author: 'Sarah Chen',
-    createdAt: '2024-04-08T12:15:00Z',
-    updatedAt: '2024-04-18T13:45:00Z',
-    version: '1.0',
-    status: 'approved',
-    department: 'EE Materials',
-    resolution: '8K',
-    textureResolution: '8K',
-    maps: ['BaseColor', 'Normal'],
-    pbr: {
-      baseColor: '#a85a2c',
-      metallic: 0.0,
-      roughness: 0.08,
-      specular: 0.87,
       transmission: 0.75,
       ior: 1.52
     },
     files: [
-      { id: '1', name: 'orange_tinted_glass.sbsar', type: 'sbsar', size: '6.9 MB', sizeBytes: 7229440, downloadUrl: '#' },
-      { id: '2', name: 'orange_tinted_glass_albedo_8k.png', type: 'png', size: '19.1 MB', sizeBytes: 20029440, downloadUrl: '#' },
-      { id: '3', name: 'orange_tinted_glass_normal_8k.png', type: 'png', size: '17.4 MB', sizeBytes: 18243584, downloadUrl: '#' }
+      { id: '1', name: 'tinted_glass_red_orange.sbsar', type: 'sbsar', size: '6.95 MB', sizeBytes: 7290470, downloadUrl: '#' },
+      { id: '2', name: 'tinted_glass_red_orange_albedo_8k.png', type: 'png', size: '19.3 MB', sizeBytes: 20251648, downloadUrl: '#' },
+      { id: '3', name: 'tinted_glass_red_orange_normal_8k.png', type: 'png', size: '17.45 MB', sizeBytes: 18298880, downloadUrl: '#' }
     ],
     isFavorite: false
   },
