@@ -33,6 +33,16 @@ export function AssetCard({ asset }: AssetCardProps) {
     return count.toString()
   }
 
+  // Determine the correct detail page based on category
+  const getDetailPath = () => {
+    if (asset.category === 'Materials') {
+      return `/materials/${asset.id}`
+    }
+    return `/assets/${asset.id}`
+  }
+
+  const detailPath = getDetailPath()
+
   return (
     <div
       className={cn(
@@ -65,7 +75,7 @@ export function AssetCard({ asset }: AssetCardProps) {
           isHovered ? "opacity-100" : "opacity-0"
         )}>
           <div className="flex items-center gap-2">
-            <Link href={`/assets/${asset.id}`}>
+            <Link href={detailPath}>
               <Button size="sm" variant="secondary" className="glass gap-2">
                 <Eye className="h-3.5 w-3.5" />
                 View
@@ -114,7 +124,7 @@ export function AssetCard({ asset }: AssetCardProps) {
 
       {/* Info */}
       <div className="p-4">
-        <Link href={`/assets/${asset.id}`}>
+        <Link href={detailPath}>
           <h3 className="font-semibold text-sm mb-1 truncate hover:text-primary transition-colors">
             {asset.name}
           </h3>

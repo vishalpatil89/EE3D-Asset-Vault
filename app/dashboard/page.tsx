@@ -3,113 +3,118 @@
 import { Navbar } from '@/components/navbar'
 import { Sidebar } from '@/components/sidebar'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { useAppStore } from '@/lib/store'
-import { Layers, FileImage, Palette, Box, TrendingUp, Users, Clock, HardDrive } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
+import { Layers, FileImage, Palette, Box, Upload } from 'lucide-react'
 
 export default function DashboardPage() {
-  const assets = useAppStore(state => state.assets)
-  
   const stats = [
     {
       title: 'Total Assets',
-      value: assets.length.toString(),
+      value: '1,234',
       change: '+12%',
       icon: Layers,
     },
     {
       title: '3D Models',
-      value: assets.filter(a => a.category === '3D Models').length.toString(),
+      value: '456',
       change: '+8%',
       icon: Box,
     },
     {
-      title: 'Textures',
-      value: assets.filter(a => a.category === 'Textures').length.toString(),
-      change: '+15%',
+      title: 'Environments',
+      value: '287',
+      change: '+20%',
       icon: FileImage,
     },
     {
       title: 'Materials',
-      value: assets.filter(a => a.category === 'Materials').length.toString(),
+      value: '189',
       change: '+5%',
       icon: Palette,
     },
   ]
 
+  const dashboardItems = [
+    { name: 'Assets', thumbnail: '/thumbnails/assets.jpg', description: 'Browse all your 3D assets' },
+    { name: 'Textures', thumbnail: '/thumbnails/textures.jpg', description: 'Texture library and details' },
+    { name: 'Materials', thumbnail: '/thumbnails/materials.jpg', description: 'Material definitions and properties' },
+    { name: 'Tools', thumbnail: '/thumbnails/tools.jpg', description: 'Utility tools and helpers' },
+    { name: 'Collections', thumbnail: '/thumbnails/collections.jpg', description: 'Organized asset collections' },
+    { name: 'Documentation', thumbnail: '/thumbnails/documentation.jpg', description: 'Guides and documentation' }
+  ]
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-100">
+    <div className="min-h-screen bg-background">
       <Navbar />
       <div className="flex">
         <Sidebar />
-        <main className="flex-1 p-8 ml-64">
-          <div className="mb-8">
-            <h1 className="text-3xl font-semibold text-foreground">Dashboard</h1>
-            <p className="text-muted-foreground mt-1">Overview of your asset vault</p>
-          </div>
+        <main className="flex-1 pt-20 pb-12 px-8 ml-56 mr-80">
+          <div className="max-w-4xl mx-auto space-y-8">
+            {/* Header */}
+            <div className="flex items-start justify-between">
+              <div>
+                <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">Dashboard</h1>
+                <p className="text-sm text-muted-foreground mt-2">Browse and manage your automotive 3D assets</p>
+              </div>
+              <Button className="gap-2 gradient-primary glow-primary text-primary-foreground rounded-xl hover:gradient-primary-hover">
+                <Upload className="h-4 w-4" />
+                Upload Material
+              </Button>
+            </div>
 
-          {/* Stats Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-            {stats.map((stat) => (
-              <Card key={stat.title} className="glass-card">
-                <CardHeader className="flex flex-row items-center justify-between pb-2">
-                  <CardTitle className="text-sm font-medium text-muted-foreground">
-                    {stat.title}
-                  </CardTitle>
-                  <stat.icon className="h-4 w-4 text-muted-foreground" />
-                </CardHeader>
-                <CardContent>
-                  <div className="text-2xl font-bold">{stat.value}</div>
-                  <p className="text-xs text-green-600 flex items-center gap-1 mt-1">
-                    <TrendingUp className="h-3 w-3" />
-                    {stat.change} from last month
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+            {/* Stats Grid */}
+            <div className="grid grid-cols-4 gap-4">
+              {stats.map((stat) => (
+                <Card key={stat.title} className="glass-card border-border/30 glow-primary hover:border-purple-500/50 transition-all">
+                  <CardHeader className="pb-2">
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="p-1.5 rounded-lg bg-purple-500/20">
+                        <stat.icon className="h-4 w-4 text-purple-400" />
+                      </div>
+                      <CardTitle className="text-xs font-medium text-muted-foreground">{stat.title}</CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="text-3xl font-bold text-foreground">{stat.value}</div>
+                    <p className="text-xs text-cyan-400 mt-2">{stat.change} this month</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
 
-          {/* Secondary Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Card className="glass-card">
-              <CardHeader>
-                <div className="flex items-center gap-2">
-                  <Users className="h-4 w-4 text-primary" />
-                  <CardTitle className="text-base">Team Activity</CardTitle>
-                </div>
-                <CardDescription>Active contributors this week</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="text-3xl font-bold">24</div>
-              </CardContent>
-            </Card>
+            {/* Browse Section */}
+            <div className="space-y-6">
+              <h2 className="text-lg font-semibold text-foreground">Browse</h2>
+              
+              {/* Dashboard Items Grid */}
+              <div className="grid grid-cols-3 gap-4">
+                {dashboardItems.map((item) => (
+                  <Card key={item.name} className="glass-card border-border/30 overflow-hidden group hover:border-cyan-500/50 transition-all glow-accent cursor-pointer">
+                    <div className="aspect-square bg-gradient-to-br from-purple-900/40 to-cyan-900/40 relative overflow-hidden">
+                      <img src={item.thumbnail} alt={item.name} className="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-opacity" />
+                    </div>
+                    <CardHeader className="pb-2 pt-4">
+                      <CardTitle className="text-base text-foreground">{item.name}</CardTitle>
+                      <CardDescription className="text-xs text-muted-foreground">{item.description}</CardDescription>
+                    </CardHeader>
+                  </Card>
+                ))}
+              </div>
 
-            <Card className="glass-card">
-              <CardHeader>
-                <div className="flex items-center gap-2">
-                  <Clock className="h-4 w-4 text-primary" />
-                  <CardTitle className="text-base">Pending Review</CardTitle>
-                </div>
-                <CardDescription>Assets awaiting approval</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="text-3xl font-bold">7</div>
-              </CardContent>
-            </Card>
-
-            <Card className="glass-card">
-              <CardHeader>
-                <div className="flex items-center gap-2">
-                  <HardDrive className="h-4 w-4 text-primary" />
-                  <CardTitle className="text-base">Storage Used</CardTitle>
-                </div>
-                <CardDescription>Of 500 GB allocated</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="text-3xl font-bold">247 GB</div>
-              </CardContent>
-            </Card>
+            </div>
           </div>
         </main>
+
+        {/* Right Sidebar */}
+        <aside className="w-80 glass border-l border-border/30 flex flex-col pt-20 overflow-y-auto">
+          <div className="p-6">
+            <div className="text-center text-muted-foreground text-sm">
+              <p>Ready to explore more?</p>
+              <p className="mt-2 text-xs">Select any category from the main dashboard to get started.</p>
+            </div>
+          </div>
+        </aside>
       </div>
     </div>
   )

@@ -2,7 +2,7 @@
 
 import { Navbar } from '@/components/navbar'
 import { Sidebar } from '@/components/sidebar'
-import { AssetGrid } from '@/components/asset-grid'
+
 import { UploadModal } from '@/components/upload-modal'
 import { useAppStore } from '@/lib/store'
 import { cn } from '@/lib/utils'
@@ -57,8 +57,7 @@ export default function Dashboard() {
             />
           </div>
 
-          {/* Asset Grid */}
-          <AssetGrid />
+
         </div>
       </main>
     </div>
