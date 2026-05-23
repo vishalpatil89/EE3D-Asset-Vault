@@ -41,9 +41,7 @@ export default function DashboardPage() {
     { name: 'Materials', thumbnail: '/thumbnails/materials.jpg', description: 'Material definitions and properties' },
     { name: 'Tools', thumbnail: '/thumbnails/tools.jpg', description: 'Utility tools and helpers' },
     { name: 'Collections', thumbnail: '/thumbnails/collections.jpg', description: 'Organized asset collections' },
-    { name: 'Documentation', thumbnail: '/thumbnails/documentation.jpg', description: 'Guides and documentation' },
-    { name: 'Favorites', thumbnail: '/thumbnails/favorites.jpg', description: 'Your favorite items' },
-    { name: 'Activity', thumbnail: '/thumbnails/activity.jpg', description: 'Recent activity and updates' }
+    { name: 'Documentation', thumbnail: '/thumbnails/documentation.jpg', description: 'Guides and documentation' }
   ]
 
   return (
@@ -90,7 +88,7 @@ export default function DashboardPage() {
               <h2 className="text-lg font-semibold text-foreground">Browse</h2>
               
               {/* Dashboard Items Grid */}
-              <div className="grid grid-cols-4 gap-4">
+              <div className="grid grid-cols-3 gap-4">
                 {dashboardItems.map((item) => (
                   <Card key={item.name} className="glass-card border-border/30 overflow-hidden group hover:border-cyan-500/50 transition-all glow-accent cursor-pointer">
                     <div className="aspect-square bg-gradient-to-br from-purple-900/40 to-cyan-900/40 relative overflow-hidden">
